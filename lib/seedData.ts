@@ -277,7 +277,7 @@ export async function logCarComplaint(payload: {
           vin: `VIN-${make.slice(0, 3).toUpperCase()}-${Date.now().toString().slice(-6)}`,
           status: "OPTIMAL",
         },
-        { upsert: true, new: true }
+        { upsert: true, returnDocument: 'after' }
       );
       const doc = await Complaint.create(complaintData);
       return doc;
