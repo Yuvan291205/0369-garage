@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #050608;
+    --foreground: #f3f4f6;
+    --neon-red: #ff003c;
+    --electric-blue: #00f0ff;
+    --gunmetal-grey: #1a1d24;
+    --matte-black: #0a0b0d;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Cyber Fonts */
+.font-orbitron {
+  font-family: var(--font-orbitron), sans-serif;
+}
+
+.font-rajdhani {
+  font-family: var(--font-rajdhani), sans-serif;
+}
+
+.font-exo {
+  font-family: var(--font-exo), sans-serif;
+}
+
+/* Futuristic Color Helpers */
+.bg-matte-black {
+  background-color: #0a0b0d;
+}
+
+.bg-gunmetal-grey {
+  background-color: #1a1d24;
+}
+
+.text-neon-red {
+  color: #ff003c;
+}
+
+.text-electric-blue {
+  color: #00f0ff;
+}
+
+.border-gunmetal-grey {
+  border-color: #1a1d24;
+}
+
+.bg-neon-red {
+  background-color: #ff003c;
+}
+
+.bg-electric-blue {
+  background-color: #00f0ff;
+}
+
+/* Glassmorphism & Cyber Panel Styling */
+.glass-panel {
+  background: rgba(10, 11, 13, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-neon-border {
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.08);
+}
+
+.glass-neon-border:hover {
+  border-color: rgba(255, 0, 60, 0.5);
+  box-shadow: 0 0 35px rgba(255, 0, 60, 0.15);
+}
+
+/* Glow Effects */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(255, 0, 60, 0.4);
+}
+
+.drop-shadow-glow-blue {
+  filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.8));
+}
+
+.drop-shadow-glow-red {
+  filter: drop-shadow(0 0 10px rgba(255, 0, 60, 0.8));
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Scanline Overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+}
+
+/* Animations */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050608;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1d24;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
