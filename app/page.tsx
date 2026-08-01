@@ -1,5 +1,5 @@
-import ScorpionControlPage from "./jarvis/page";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <ScorpionControlPage />;
+  redirect("/login");
 }
